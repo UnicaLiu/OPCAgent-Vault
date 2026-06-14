@@ -1,0 +1,79 @@
+{
+  "_comment": "OPCAgent Vault — Claude CLI 权限和工作区配置",
+  "_version": "1.0",
+  "_updated": "2026-06-14",
+
+  "permissions": {
+    "allow": [
+      "Bash(python3 .agents/servers/obsidian-vault/server.py:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(sort:*)",
+      "Bash(mkdir:*)",
+      "Bash(curl:*)",
+      "Read(*)",
+      "Write(wiki/**)",
+      "Write(raw/**/README*)",
+      "Edit(wiki/**)",
+      "Edit(raw/**/README*)",
+      "WebFetch(*)"
+    ],
+
+    "deny": [
+      "Write(raw/**)",
+      "Edit(raw/**)",
+      "Bash(rm:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(shutdown:*)",
+      "Bash(reboot:*)"
+    ],
+
+    "defaultMode": "disallowed"
+  },
+
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "test -z \"$(echo \"$CLAUDE_TOOL_INPUT\" | grep -o 'raw/')\" || echo '⚠️ WARNING: Writing to raw/ directory!'"
+          }
+        ]
+      }
+    ]
+  },
+
+  "workspace": {
+    "vaultPath": "/Users/Zhuanz/Developer/OPCAgent/knowledge/OPCAgent Vault",
+    "defaultWorkdir": "/Users/Zhuanz/Developer/OPCAgent/knowledge/OPCAgent Vault",
+    "knowledgePaths": {
+      "raw": "raw/",
+      "wiki": "wiki/",
+      "config": "CLAUDE.md"
+    }
+  },
+
+  "mcp": {
+    "servers": {
+      "obsidian-vault": {
+        "enabled": true,
+        "startupTimeoutMs": 10000,
+        "description": "OPCAgent 知识库 MCP Server —唯一的 wiki/ 写入网关"
+      }
+    }
+  },
+
+  "agentDefaults": {
+    "model": "claude-sonnet-4-20250514",
+    "maxTokens": 8192,
+    "temperature": 0.7,
+    "workingDirectory": "/Users/Zhuanz/Developer/OPCAgent/knowledge/OPCAgent Vault"
+  }
+}

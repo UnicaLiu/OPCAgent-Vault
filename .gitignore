@@ -1,0 +1,86 @@
+# ============================================================
+# OPCAgent Vault .gitignore
+# 此仓库跟踪「结构 + 公共专家库 + 配置」，不跟踪主机特定数据
+# ============================================================
+
+# --- Obsidian 配置 ---
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/hotkeys.json
+.obsidian/plugins/
+.obsidian/themes/
+
+# --- AI 会话记录（本地） ---
+.claude/sessions/
+.claudian/sessions/
+
+# --- 操作系统 ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- 临时文件 ---
+*.tmp
+*.swp
+*~
+*.bak
+*.log
+
+# ============================================================
+# 主机特定数据 — 跟踪结构（README.md/.gitkeep），不跟踪数据
+# ============================================================
+
+# raw/ — 只跟踪模板和 README，不跟踪实际数据文件
+raw/产品原始资料/*
+!raw/产品原始资料/_产品摄入模板.json
+!raw/产品原始资料/.gitkeep
+!raw/产品原始资料/README.md
+raw/竞品参考/*
+!raw/竞品参考/.gitkeep
+raw/爆品素材/*
+!raw/爆品素材/.gitkeep
+raw/外部知识/*
+!raw/外部知识/.gitkeep
+
+# wiki/产品库/ — 主机独立
+wiki/产品库/产品档案/*
+!wiki/产品库/产品档案/.gitkeep
+wiki/产品库/产品报告/*
+!wiki/产品库/产品报告/.gitkeep
+
+# wiki/任务中心/ — 主机独立
+wiki/任务中心/任务记录/*
+!wiki/任务中心/任务记录/.gitkeep
+wiki/任务中心/脚本库/*
+!wiki/任务中心/脚本库/.gitkeep
+
+# wiki/数据归因/ — 主机独立
+wiki/数据归因/归因报告/*
+!wiki/数据归因/归因报告/.gitkeep
+wiki/数据归因/数据洞察/*
+!wiki/数据归因/数据洞察/.gitkeep
+
+# wiki/爆品分析/ — 主机独立
+wiki/爆品分析/分析报告/*
+!wiki/爆品分析/分析报告/.gitkeep
+wiki/爆品分析/素材索引/*
+!wiki/爆品分析/素材索引/.gitkeep
+
+# wiki/对比分析/ — 主机独立
+wiki/对比分析/*
+!wiki/对比分析/README.md
+!wiki/对比分析/.gitkeep
+
+# ============================================================
+# 大文件（视频素材等）
+# ============================================================
+*.mp4
+*.mov
+*.avi
+*.psd
+*.ai
+*.sketch

@@ -1,0 +1,77 @@
+{
+  "_schema": "OPCAgent 产品信息摄入规范 v1.0 | 参照 app/module/product_info/parameter-io-standard.md",
+  "_usage": "复制此模板，填入实际产品数据后保存为 {productCode}.json 放入本目录，Agent 将自动检测并摄入。填写完后删除所有 _ 开头的注释字段。",
+
+  "productCode": "XXX-001",
+  "productNameZh": "产品中文名称",
+  "productNameLocal": "",
+  "country": "目标国家（简体中文）",
+  "categories": ["一级类目", "二级类目", "三级类目"],
+  "createdAt": "2026-06-14 12:00:00",
+
+  "extendedAttributes": [
+    { "name": "属性名1", "value": "属性值1" },
+    { "name": "属性名2", "value": "属性值2" }
+  ],
+
+  "extendedInfo": [
+    { "name": "TK店铺", "value": "https://www.tiktok.com/@yourstore" },
+    { "name": "独立站", "value": "https://yourstore.com" }
+  ],
+
+  "specifications": [
+    { "name": "颜色", "value": "白色" },
+    { "name": "颜色", "value": "黑色" },
+    { "name": "尺寸", "value": "S" },
+    { "name": "尺寸", "value": "M" }
+  ],
+
+  "skus": [
+    {
+      "skuId": "XXX-W-S",
+      "attributes": { "颜色": "白色", "尺寸": "S" },
+      "price": { "originalPrice": "199", "promotionalPrice": "149" }
+    },
+    {
+      "skuId": "XXX-B-M",
+      "attributes": { "颜色": "黑色", "尺寸": "M" },
+      "price": { "originalPrice": "249", "promotionalPrice": "199" }
+    }
+  ],
+
+  "keySellingPoints": [
+    {
+      "title": "卖点标题1 - 简洁有力，可直接用于文案",
+      "description": "卖点详细描述 - 说明具体价值、场景或差异化优势。描述越具体，AI 生成的脚本越精准。"
+    },
+    {
+      "title": "卖点标题2",
+      "description": "卖点详细描述"
+    },
+    {
+      "title": "卖点标题3",
+      "description": "卖点详细描述"
+    }
+  ],
+
+  "price": {
+    "originalPrice": "299",
+    "promotionalPrice": "249"
+  },
+
+  "taboos_preferences": {
+    "_note": "目标市场的文化禁忌和受众偏好（选填但强烈建议填写）",
+    "cultural_taboos": ["禁忌1", "禁忌2"],
+    "audience_preferences": ["偏好1", "偏好2"],
+    "visual_style_notes": "目标受众偏好的视觉风格描述"
+  },
+
+  "images": {
+    "_note": "产品图片路径，相对于本目录",
+    "main_image": "{productCode}-主图.png",
+    "detail_images": [
+      "{productCode}-细节1.png",
+      "{productCode}-场景1.png"
+    ]
+  }
+}
