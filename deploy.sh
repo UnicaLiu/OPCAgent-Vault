@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # ============================================================================
 # OPCAgent Vault — 一键部署脚本
-# 用法: curl -sSL https://raw.githubusercontent.com/UnicaLiu/opcagent-vault/main/deploy.sh | bash
+# 用法: curl -sSL https://raw.githubusercontent.com/UnicaLiu/OPCAgent-Vault/main/deploy.sh | bash
 # 或:   bash deploy.sh [安装路径]
 # ============================================================================
 set -euo pipefail
 
 # --- 配置 ---
-REPO_URL="git@github.com:UnicaLiu/opcagent-vault.git"
+REPO_URL="git@github.com:UnicaLiu/OPCAgent-Vault.git"
 DEFAULT_INSTALL_PATH="$HOME/OPCAgent-Vault"
 INSTALL_PATH="${1:-$DEFAULT_INSTALL_PATH}"
 BRANCH="main"

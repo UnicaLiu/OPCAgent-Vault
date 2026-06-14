@@ -1,6 +1,6 @@
 # OPCAgent Vault — 电商量化跑品知识库
 
-[![Vault Version](https://img.shields.io/badge/vault-v1.0-blue)](https://github.com/UnicaLiu/opcagent-vault)
+[![Vault Version](https://img.shields.io/badge/vault-v1.0-blue)](https://github.com/UnicaLiu/OPCAgent-Vault)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 > **AI 驱动的电商量化短视频营销系统知识库。一键部署到任意本地主机。**
@@ -18,13 +18,13 @@
 ## 🚀 一键部署
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/UnicaLiu/opcagent-vault/main/deploy.sh | bash
+curl -sSL https://raw.githubusercontent.com/UnicaLiu/OPCAgent-Vault/main/deploy.sh | bash
 ```
 
 或手动：
 
 ```bash
-git clone git@github.com:UnicaLiu/opcagent-vault.git ~/OPCAgent-Vault
+git clone git@github.com:UnicaLiu/OPCAgent-Vault.git ~/OPCAgent-Vault
 cd ~/OPCAgent-Vault
 ```
 
@@ -93,7 +93,7 @@ OPCAgent Vault/
 
 ```bash
 # 1. 克隆
-git clone git@github.com:UnicaLiu/opcagent-vault.git ~/OPCAgent-Vault
+git clone git@github.com:UnicaLiu/OPCAgent-Vault.git ~/OPCAgent-Vault
 
 # 2. 用 Obsidian 打开此目录
 
